@@ -10,6 +10,10 @@ from sklearn import datasets # sklearn comes with a variety of preloaded dataset
 from sklearn import metrics # calculate how well our model is doing
 from sklearn.linear_model import LinearRegression
 
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import make_scorer
+from sklearn.grid_search import GridSearchCV
+
 '''conda -c install scikit-learn=0.17'''
 
 # Load the dataset
