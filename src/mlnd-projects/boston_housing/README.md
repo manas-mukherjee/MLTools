@@ -44,3 +44,7 @@ The modified Boston housing dataset consists of 489 data points, with each datap
 
 **Target Variable**
 4. `MEDV`: median value of owner-occupied homes
+
+### References
+http://machinelearningmastery.com/gentle-introduction-to-the-bias-variance-trade-off-in-machine-learning/
+http://scott.fortmann-roe.com/docs/BiasVariance.html
