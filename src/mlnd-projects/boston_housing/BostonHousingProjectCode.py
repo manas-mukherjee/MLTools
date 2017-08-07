@@ -15,6 +15,35 @@ data = pd.read_csv('housing.csv')
 prices = data['MEDV']
 features = data.drop('MEDV', axis=1)
 
+
+def performance_metric(y_true, y_predict):
+    """ Calculates and returns the performance score between
+        true and predicted values based on the metric chosen. """
+
+    return r2_score(y_true, y_predict)
+
+if True:
+    # Calculate the performance of this model
+    y_true = [3, -0.5, 2, 7, 4.2]
+    y_predict = [2.5, 0.0, 2.1, 7.8, 5.3]
+
+    # Simple model
+    y_true_mean = np.mean(y_true)
+    simple_model_mse = np.sum(np.square(np.subtract(y_true, y_true_mean)))
+    print 'simple mse - ', np.sum(np.square(np.subtract(y_true, y_true_mean)))
+
+    # Predition model
+    y_true_mean = np.mean(y_true)
+    pred_model_mse = np.sum(np.square(np.subtract(y_true, y_predict)))
+    print 'predition model mse - ', pred_model_mse
+
+    manual_r2_score = 1 - (pred_model_mse/simple_model_mse)
+    print 'manually calculated R2-score - ', manual_r2_score
+
+
+    score = performance_metric(y_true, y_predict)
+    print "Model has a coefficient of determination, R^2, of {:.3f}.".format(score)
+
 # Success
 print "Boston housing dataset has {} data points with {} variables each.".format(*data.shape)
 
@@ -37,13 +66,6 @@ if True:
     print data[(data.RM > 4.5) & (data.RM <5.5 )]
 
     print "Mean price of housing with 5 bedroom - " , np.mean(data[data['RM']==5]['MEDV'])
-
-
-def performance_metric(y_true, y_predict):
-    """ Calculates and returns the performance score between
-        true and predicted values based on the metric chosen. """
-
-    return r2_score(y_true, y_predict)
 
 # Splitting data-set
 X_train, X_test, y_train, y_test = train_test_split(features, prices, test_size = 0.20)
