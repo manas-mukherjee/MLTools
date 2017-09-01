@@ -78,7 +78,7 @@ def matrix_mul():
 
     country_point_data = {'country_name': countries,'points': medal_count_points}
     country_point_dataframe = DataFrame(country_point_data)
-    print country_point_dataframe
+    print country_point_dataframe.shape
 
 if True:
     matrix_mul()
