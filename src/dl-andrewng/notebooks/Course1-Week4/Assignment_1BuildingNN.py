@@ -46,3 +46,19 @@ print('---------')
 L =2
 for l in reversed(range(L-1)):
     print l
+
+print('---------')
+layers_dims = [3,2,1]
+for l in range(1,3):
+    print(l, layers_dims[l])
+    print( np.zeros((layers_dims[l],1))  )
+
+print('---------')
+print( np.zeros((2,1)))
+
+print ('----------')
+print np.random.randn(3,2)
+
+
+
+
