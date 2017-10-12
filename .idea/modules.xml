@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MLTools.iml" filepath="$PROJECT_DIR$/.idea/MLTools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../nlp_python/.idea/nlp_python.iml" filepath="$PROJECT_DIR$/../nlp_python/.idea/nlp_python.iml" />
     </modules>
   </component>
 </project>
