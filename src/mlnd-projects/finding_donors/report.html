@@ -2896,16 +2896,9 @@ jAK7iEjEKLCLiESMAruISMT8HxCbprWW3w8aAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>We have experimented using serveral standard algorithms that have potential of understanding the sample census data.
-Since this prediction model would be used to reach out potential donors, so we considered that identifying someone who does not make more than $50,000 as someone who does would be detrimental to CharityML. As a result, we have given emphasis on the model's <strong>precision</strong>.</p>
-<ul>
-<li><p>First Approach - At first, we tried the <em>'Logistic Regression'</em> which is a very common approach in such usecases where we have structed labelled sample data and there are only two possible outcomes i.e make more or less than $50K/year. Overall it worked well but this model's precison was quite low ( ~0.7 out of 1 ). So we pivoted on this and experimented furhter using better algorithms.</p>
-</li>
-<li><p>We tired another common algorithm call <em>'DecisionTree'</em> but the resulted model produced low accuracy( It had ~18% error).</p>
-</li>
-<li><p>At last, we tried another approach called <em>'Ensemble AdaBoosting'</em> which augmented the previous approach's('Decision tree') capabilty and found much better accuracy and precision. In general, ~83% of this model's predictions are correct. As it produced best result, we finalized this model for this use-case.</p>
-</li>
-</ul>
+<p>We chose the final model called AdaBoost classifier which is a type of Ensemble method. This approach tries to combine the predictions of several base learners(models) built with a given learning algorithm(we used 'Decision Tree') in order to create a generalized, robust and complex single estimator. Each one of this base learner(known as 'weak learner') makes predictions which are correct at least 50% of the time. A set of such weak(and simple) learners sequentially classify the whole dataset with a unique dimension(split point) and measure the complexity of each data points by assigning a weight. Every weak learner focuses to classify the data points which were marked as complex(according to weight value) by the previous classifier. This general and provably effective method of producing a very accurate prediction rule by combining weak/simple and moderately inaccurate rules is known as Boosting.</p>
+<p>In this case, the AdaBoost based model fits the census data well and it operates with an optimized(~83%) accuracy.</p>
+<p>Book Ref - <a href="https://mitpress.mit.edu/sites/default/files/titles/content/9780262017183_sch_0001.pdf">Boosting</a> By Robert E. Schapire and Yoav Freund</p>
 
 </div>
 </div>
