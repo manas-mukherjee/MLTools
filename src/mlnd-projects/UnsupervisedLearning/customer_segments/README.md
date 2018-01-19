@@ -1,3 +1,5 @@
+View Project - http://htmlpreview.github.io/?https://github.com/manas-mukherjee/MLTools/blob/master/src/mlnd-projects/UnsupervisedLearning/customer_segments/report.html
+
 # Content: Unsupervised Learning
 ## Project: Creating Customer Segments
 
