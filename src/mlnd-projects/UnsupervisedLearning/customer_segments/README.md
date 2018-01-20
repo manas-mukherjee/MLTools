@@ -1,4 +1,9 @@
-View Project - http://htmlpreview.github.io/?https://github.com/manas-mukherjee/MLTools/blob/master/src/mlnd-projects/UnsupervisedLearning/customer_segments/report.html
+View Project -
+Main View ( All 48 outliers are removed )
+http://htmlpreview.github.io/?https://github.com/manas-mukherjee/MLTools/blob/master/src/mlnd-projects/UnsupervisedLearning/customer_segments/report.html
+
+2nd View ( Only 5 common outliers are removed )
+http://htmlpreview.github.io/?https://github.com/manas-mukherjee/MLTools/blob/master/src/mlnd-projects/UnsupervisedLearning/customer_segments/report_common_outliers_removed.html
 
 # Content: Unsupervised Learning
 ## Project: Creating Customer Segments
