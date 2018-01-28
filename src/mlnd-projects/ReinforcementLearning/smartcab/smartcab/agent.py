@@ -4,8 +4,8 @@ from environment import Agent, Environment
 from planner import RoutePlanner
 from simulator import Simulator
 from random import randint
-import operator
 from datetime import datetime
+import math
 
 class LearningAgent(Agent):
     """ An agent that learns to drive in the Smartcab world.
@@ -26,6 +26,7 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Set any additional class parameters as needed
+        self.total_trials =0
 
 
     def reset(self, destination=None, testing=False):
@@ -43,8 +44,27 @@ class LearningAgent(Agent):
         # Update additional class parameters as needed
         # If 'testing' is True, set epsilon and alpha to 0
 
+
         if (testing == False):
-            self.epsilon  = self.epsilon - 0.05
+
+            #Linear
+            #self.epsilon  = self.epsilon - 0.05
+
+            # ϵ=at,for 0<a<1, Initial(self.epsilon=0.99, tolerance=0.02)
+            #self.epsilon = (self.epsilon ** 2)
+
+            # ϵ=1/t2, 0<a<1 ( Bad choice - D, F )
+            # self.epsilon = float(1)/math.exp(float( 0.99 * self.total_trials))
+
+            # Cos : ϵ=cos(at),for 0<a<1
+            #self.epsilon  = math.cos(0.5*self.total_trials)
+
+            # exp : ϵ=e−at,for 0<a<1
+            #self.epsilon = math.exp(-0.5 * self.total_trials)
+            self.epsilon = math.exp(-0.002 * self.total_trials)
+
+            self.total_trials += 1
+
         else:
             self.epsilon = 0
             self.alpha = 0
@@ -72,7 +92,7 @@ class LearningAgent(Agent):
         
         # Set 'state' as a tuple of relevant data for the agent        
 
-        state = (waypoint, inputs['light'], inputs['oncoming'])
+        state = (waypoint, inputs['light'],inputs['left'],inputs['right'], inputs['oncoming'])
 
         ''' Reference
             'waypoint' { None, forward, left, right }
@@ -168,7 +188,9 @@ class LearningAgent(Agent):
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
 
-        self.Q[state][action] = (1-self.alpha)*self.Q[state][action] + self.alpha*reward
+        if self.learning:
+            self.Q[state][action] = (1-self.alpha)*self.Q[state][action] + self.alpha*reward
+
         return
 
 
@@ -204,7 +226,7 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent, learning=True)
+    agent = env.create_agent(LearningAgent, learning=True, epsilon=1.0, alpha=0.002)
     
     ##############
     # Follow the driving agent
@@ -221,15 +243,15 @@ def run():
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
 
-    sim = Simulator(env, update_delay=0.01, log_metrics=True)
+    sim = Simulator(env, update_delay=0.000, log_metrics=True, optimized=True, display=False)
 
-    ##############
+    ##############`
     # Run the simulator
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
 
-    sim.run(n_test=10)
+    sim.run(n_test=100, tolerance=0.01)
 
 
 if __name__ == '__main__':
