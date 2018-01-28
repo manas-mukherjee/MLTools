@@ -63,7 +63,7 @@ def calculate_reliability(data):
 def plot_trials(csv):
 	""" Plots the data from logged metrics during a simulation."""
 
-	data = pd.read_csv(os.path.join("logs", csv))
+	data = pd.read_csv(os.path.join("/Users/mmukherjee/PycharmProjects/MLTools/src/mlnd-projects/ReinforcementLearning/smartcab/logs", csv))
 
 	if len(data) < 10:
 		print "Not enough data collected to create a visualization."
