@@ -91,7 +91,6 @@ class LearningAgent(Agent):
         
         # Set 'state' as a tuple of relevant data for the agent        
 
-        #state = (waypoint, inputs['light'],inputs['left'],inputs['right'], inputs['oncoming'])
         state = (waypoint, inputs['light'], inputs['oncoming'])
 
         ''' Reference
@@ -230,7 +229,7 @@ def run():
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
     agent = env.create_agent(LearningAgent, learning=True, epsilon=1.0, alpha=0.002)
-    
+
     ##############
     # Follow the driving agent
     # Flags:
@@ -255,7 +254,6 @@ def run():
     #   n_test     - discrete number of testing trials to perform, default is 0
 
     sim.run(n_test=100, tolerance=0.03)
-
 
 if __name__ == '__main__':
     run()
