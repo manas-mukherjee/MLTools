@@ -1,0 +1,25 @@
+State  No,Waypoint,Light,Oncoming,forward,right,none,left,Max-Qvalue,SelectedAction,Comment
+1,left, green, forward,0.57,0.08,-0.5,-1.9,0.57,forward,optimal
+2,right, green, None,0.18,1.73,-1.26,0.2,1.73,right,optimal
+3,right, green, right,0.04,0.48,-0.14,-0.75,0.48,right,optimal
+4,left, red, None,-4.96,-0.55,1.83,-5.01,1.83,none,optimal
+5,forward, green, left,1.79,0.17,-0.87,0.14,1.79,forward,optimal
+6,left, green, right,0.29,0.04,-0.2,-1.1,0.29,forward,optimal [ since the oncoming is going right ]
+7,right, red, forward,-2.11,0.1,0.66,-1.65,0.66,none,optimal( no action when the signal is red )
+8,forward, red, forward,-1.92,-0.44,1.75,-2.42,1.75,none,same as above
+9,forward, red, right,-0.96,-0.06,1,-2.49,1,none,same as above
+10,left, red, left,-2.78,-0.11,1.67,-3.12,1.67,none,same as above
+11,right, red, left,-3.35,-0.1,0.76,-3.02,0.76,none,same as above
+12,right, red, right,-0.69,-0.01,0.36,-1.42,0.36,none,same as above
+13,left, red, right,-0.73,-0.09,0.74,-1.87,0.74,none,same as above
+14,right, green, forward,0.06,1.07,-0.38,-1.97,1.07,right,optimal
+15,left, green, None,0.24,0.25,-1.49,1.79,1.79,left,optimal
+16,forward, green, forward,1.56,0.07,-0.59,-2.27,1.56,forward,optimal
+17,forward, red, left,-3.37,-0.23,1.85,-2.85,1.85,none,optimal [ since the oncoming traffic coming from its left]
+18,forward, green, right,0.89,0.03,-0.25,-1.12,0.89,forward,optimal
+19,forward, green, None,1.85,0.24,-1.71,0.32,1.85,forward,optimal
+20,right, red, None,-5.49,-0.26,0.81,-5.14,0.81,none,Non-optimal. Right turn is possible
+21,left, red, forward,-2.05,-0.28,1.54,-2.74,1.54,none,optimal
+22,forward, red, None,-6.16,-0.29,1.85,-6.09,1.85,none,optimal
+23,left, green, left,0.14,0.1,-0.68,1.48,1.48,left,optimal
+24,right, green, left,0.08,1.41,-0.63,0.09,1.41,right,optimal

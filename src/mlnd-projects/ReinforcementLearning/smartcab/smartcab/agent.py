@@ -45,7 +45,7 @@ class LearningAgent(Agent):
         # If 'testing' is True, set epsilon and alpha to 0
 
 
-        if (testing == False):
+        if testing == False:
 
             #Linear
             #self.epsilon  = self.epsilon - 0.05
@@ -60,7 +60,6 @@ class LearningAgent(Agent):
             #self.epsilon  = math.cos(0.5*self.total_trials)
 
             # exp : ϵ=e−at,for 0<a<1
-            #self.epsilon = math.exp(-0.5 * self.total_trials)
             self.epsilon = math.exp(-0.002 * self.total_trials)
 
             self.total_trials += 1
@@ -92,7 +91,8 @@ class LearningAgent(Agent):
         
         # Set 'state' as a tuple of relevant data for the agent        
 
-        state = (waypoint, inputs['light'],inputs['left'],inputs['right'], inputs['oncoming'])
+        #state = (waypoint, inputs['light'],inputs['left'],inputs['right'], inputs['oncoming'])
+        state = (waypoint, inputs['light'], inputs['oncoming'])
 
         ''' Reference
             'waypoint' { None, forward, left, right }
@@ -171,8 +171,11 @@ class LearningAgent(Agent):
                 max_value = self.get_maxQ(state)
                 max_keys = [k for k, v in self.Q[state].items() if v == max_value]
 
-                random.seed(datetime.now())
-                action = random.choice(max_keys)
+                if(len(max_keys)>1):
+                    random.seed(datetime.now())
+                    action = random.choice(max_keys)
+                else:
+                    action = max_keys[0]
 
         return action
 
@@ -251,7 +254,7 @@ def run():
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
 
-    sim.run(n_test=100, tolerance=0.01)
+    sim.run(n_test=100, tolerance=0.03)
 
 
 if __name__ == '__main__':
