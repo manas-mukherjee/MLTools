@@ -17285,7 +17285,7 @@ zMza5P8B7s1IwLs+3nYAAAAASUVORK5CYII=
 </li>
 <li><p><font color="blue">Learning Rate(alpha) and Epsilon Tolerance</font></p>
 <ul>
-<li>In this experiment, Epsilon tolerance is <strong>0.03</strong> and 'Learning Rate'(alpha) is <strong>0.002</strong>. 
+<li>In this experiment, Epsilon tolerance is <strong>0.03</strong> and 'Learning Rate'(alpha) is <strong>0.5</strong>. 
 -'Learning Rate' was used to find the 'weighted mean'(or expected) value of the reward of any given state/action pair. It is used it to update the Q-value. </li>
 <li>Reference code - self.Q[state][action] = (1-self.alpha)<em>self.Q[state][action] + self.alpha</em>reward</li>
 <li><p>'Epsilon tolerance' - A decaying 'epsilon' parameter was used to give the model a chance of 'leveraging its learning'(exploitation) and explore other possible options by taking some random actions (exploration). Higher values of epsilon forced the model to take random actions with 'epsilon' probability. The decayed(using exp) epsilon value gradually reduced to the tolerance limit and equipped the model to depend more its leraning(max Q-values in any given state-action pair) instead of taking random actions.</p>
@@ -17310,9 +17310,7 @@ zMza5P8B7s1IwLs+3nYAAAAASUVORK5CYII=
 <ol>
 <li><p><font color="blue">Performance tuning/optimization </font></p>
 <ul>
-<li>Not satisfied with the sub-optimal reliability rating('A). It can/should be improved to make it perfect.</li>
-<li>Out of the 32 possible state spaces, the model encounted only 24(75%). It suggests, the model didn't learn anything for the remaining 8 spaces. Further reseach/experiment is required to address this serious issue. 
-PN - I tried to fix it by reducing the tolerance from 0.03 to 0.01. Though it produced more(~2300) trials, but it didn't cover the remaining state spaces which were missed in the firet place. </li>
+<li>Not satisfied with the sub-optimal reliability rating('A). It can/should be improved to make it perfect. </li>
 </ul>
 </li>
 </ol>
