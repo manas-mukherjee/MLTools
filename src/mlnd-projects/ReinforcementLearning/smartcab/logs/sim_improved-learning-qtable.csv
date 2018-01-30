@@ -1,25 +1,97 @@
-State  No,Waypoint,Light,Oncoming,forward,right,none,left,Max-Qvalue,SelectedAction,Comment
-1,left, green, forward,0.57,0.08,-0.5,-1.9,0.57,forward,optimal
-2,right, green, None,0.18,1.73,-1.26,0.2,1.73,right,optimal
-3,right, green, right,0.04,0.48,-0.14,-0.75,0.48,right,optimal
-4,left, red, None,-4.96,-0.55,1.83,-5.01,1.83,none,optimal
-5,forward, green, left,1.79,0.17,-0.87,0.14,1.79,forward,optimal
-6,left, green, right,0.29,0.04,-0.2,-1.1,0.29,forward,optimal [ since the oncoming is going right ]
-7,right, red, forward,-2.11,0.1,0.66,-1.65,0.66,none,optimal( no action when the signal is red )
-8,forward, red, forward,-1.92,-0.44,1.75,-2.42,1.75,none,same as above
-9,forward, red, right,-0.96,-0.06,1,-2.49,1,none,same as above
-10,left, red, left,-2.78,-0.11,1.67,-3.12,1.67,none,same as above
-11,right, red, left,-3.35,-0.1,0.76,-3.02,0.76,none,same as above
-12,right, red, right,-0.69,-0.01,0.36,-1.42,0.36,none,same as above
-13,left, red, right,-0.73,-0.09,0.74,-1.87,0.74,none,same as above
-14,right, green, forward,0.06,1.07,-0.38,-1.97,1.07,right,optimal
-15,left, green, None,0.24,0.25,-1.49,1.79,1.79,left,optimal
-16,forward, green, forward,1.56,0.07,-0.59,-2.27,1.56,forward,optimal
-17,forward, red, left,-3.37,-0.23,1.85,-2.85,1.85,none,optimal [ since the oncoming traffic coming from its left]
-18,forward, green, right,0.89,0.03,-0.25,-1.12,0.89,forward,optimal
-19,forward, green, None,1.85,0.24,-1.71,0.32,1.85,forward,optimal
-20,right, red, None,-5.49,-0.26,0.81,-5.14,0.81,none,Non-optimal. Right turn is possible
-21,left, red, forward,-2.05,-0.28,1.54,-2.74,1.54,none,optimal
-22,forward, red, None,-6.16,-0.29,1.85,-6.09,1.85,none,optimal
-23,left, green, left,0.14,0.1,-0.68,1.48,1.48,left,optimal
-24,right, green, left,0.08,1.41,-0.63,0.09,1.41,right,optimal
+State No,waypoint,light,left,oncoming,forward,right,None,left,Max-Qvalue,Selected Action,Waypoint == Action ?,Comment
+1,right, green, forward, right,0.36,1.65,-4.11,-17.82,1.65,right,TRUE,Optimal. There was no conflict scenerios. The agent learnt this behaviour
+2,left, green, forward, left,0.89,0.36,-5.03,2.05,2.05,left,TRUE,Optimal. The agent learnt to check the signal and driving intetion of oncoming traffic
+3,left, red, right, left,-17.04,0.92,1.83,-5.27,1.83,None,FALSE,Optimal. It did not take any action on red signal.
+4,right, green, right, forward,0.35,1.65,-2.41,-17.66,1.65,right,TRUE,
+5,left, red, right, right,-4.76,0,1.84,-29.77,1.84,None,FALSE,
+6,left, green, left, None,0.89,0.75,-5.28,2.16,2.16,left,TRUE,
+7,left, green, None, forward,0.24,0.66,-4.83,-20.69,0.66,right,FALSE,
+8,right, green, None, None,0.93,1.49,-5.27,0.77,1.49,right,TRUE,
+9,forward, red, right, right,-9.69,0.4,2.47,-34.81,2.47,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+10,right, green, left, right,0.39,1.55,0,-17.1,1.55,right,TRUE,
+11,right, green, left, None,0.72,2.21,-5.48,0.32,2.21,right,TRUE,
+12,right, green, None, right,0.75,1.43,-5.43,-20.28,1.43,right,TRUE,
+13,left, red, left,on,-17.66,0.76,2.09,-10.53,2.09,None,FALSE,
+14,right, red, right, left,-16.82,2.19,0.71,-11.98,2.19,right,TRUE,
+15,left, green, left, forward,0.44,0.25,-4.31,-14.91,0.44,forward,FALSE,
+16,right, green, right, None,0.94,1.22,-4.75,0.6,1.22,right,TRUE,
+17,forward, green, right, right,0,0.4,-2.49,-9.57,0.4,right,FALSE,
+18,forward, red, right, left,-10.22,0.9,1.68,-10.2,1.68,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+19,right, red, right, forward,-9.31,1.69,0.52,0,1.69,right,TRUE,
+20,left, green, left, left,0.8,1,-5.44,1.91,1.91,left,TRUE,
+21,left, green, right, None,0.53,0.17,-5.22,1.87,1.87,left,TRUE,
+22,forward, green, None, forward,1.39,0.33,-4.57,-19.78,1.39,forward,TRUE,
+23,right, green, forward, left,0.68,1.23,-4.79,0.19,1.23,right,TRUE,
+24,left, green, right, right,0.55,0.46,-4.39,-10.18,0.55,forward,FALSE,"Intended direction - left, signal - green, oncoming traffic direction - right. Agent moved forward to avoid accident"
+25,forward, green, None, left,2.12,0.89,-5.5,0.98,2.12,forward,TRUE,
+26,left, green, None, left,1.11,0.52,-4.46,1.94,1.94,left,TRUE,
+27,left, green, right, left,0.93,1.14,-4.25,2.65,2.65,left,TRUE,
+28,right, green, None, left,0.38,1.65,-4.67,0.84,1.65,right,TRUE,
+29,forward, green, right, forward,1.74,0.79,-4.61,-19.85,1.74,forward,TRUE,
+30,right, green, left, left,0.41,2.11,-5.04,0.25,2.11,right,TRUE,
+31,forward, green, None, None,1.42,0.63,-5.17,0.75,1.42,forward,TRUE,
+32,left, red, left, left,-10.25,0.73,2.39,-10.25,2.39,None,FALSE,
+33,right, red, left, right,-7.39,1.53,0.64,-35.35,1.53,right,TRUE,
+34,forward, red, forward, forward,-38.69,-19.56,2.02,-34.61,2.02,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+35,right, green, forward, None,1.02,1.73,-5.11,0.52,1.73,right,TRUE,
+36,left, red, forward, right,-37.82,-20.02,1.82,-39.79,1.82,None,FALSE,
+37,left, green, forward, right,0.37,0.32,-3.38,-18.55,0.37,forward,FALSE,"Intended direction - left, signal - green, oncoming traffic direction - right. Agent moved forward to avoid accident"
+38,forward, red, forward, left,-40.07,-19.69,1.81,-40.29,1.81,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+39,forward, green, forward, right,1.08,0.11,-3.79,-14.81,1.08,forward,TRUE,
+40,left, red, left, None,-19.37,0.6,1.58,-10.93,1.58,None,FALSE,
+41,forward, red, right, None,-18.97,0.51,1.71,-11.12,1.71,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+42,forward, red, right, forward,-10.93,0.95,1.58,-25.4,1.58,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+43,left, green, None, right,0.31,0.72,-5.02,-20.69,0.72,right,FALSE,SubOptimal
+44,right, red, forward, None,-39.97,-19.91,0.61,-39.5,0.61,None,FALSE,Optimal. On coming traffic from left. Agent didn't take right on red
+45,forward, red, None, None,-9.55,0.28,1.46,-10.36,1.46,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+46,forward, green, forward, forward,1.49,0.92,-5.36,-19.65,1.49,forward,TRUE,
+47,forward, green, left, None,1.78,0.54,-5.47,1,1.78,forward,TRUE,
+48,forward, green, left, right,1.57,0.88,-4.95,-19.37,1.57,forward,TRUE,
+49,right, green, forward, forward,0.64,1.89,-4.21,-17.59,1.89,right,TRUE,
+50,forward, red, forward, right,-34.62,-18.57,1.52,-34.35,1.52,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+51,forward, red, left, right,-12.53,0.87,1.28,-38.59,1.28,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+52,left, green, forward, None,0.9,0.64,-5.29,1.46,1.46,left,TRUE,
+53,forward, green, left, left,2.08,1.08,-4.61,1.07,2.08,forward,TRUE,
+54,right, green, right, left,0.62,1.86,-4.52,0.73,1.86,right,TRUE,
+55,right, red, None, None,-10.13,1.52,0.58,-10.32,1.52,right,TRUE,
+56,left, green, right, forward,0.4,1.38,-2.13,-19.83,1.38,right,FALSE,
+57,forward, red, left, forward,-11.1,1.12,2.4,-10.53,2.4,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+58,forward, green, forward, None,1.68,0.48,-5.46,0.6,1.68,forward,TRUE,
+59,forward, red, None, left,-17.92,0.95,1.77,-9.67,1.77,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+60,forward, green, left, forward,1.93,0.83,-4.86,-19.37,1.93,forward,TRUE,
+61,left, red, None, left,-10.31,0.75,2.18,-25.33,2.18,None,FALSE,
+62,right, red, forward, forward,-39.82,-17.85,0.24,-37.94,0.24,None,FALSE,Optimal. On coming traffic from left. Agent didn't take right on red
+63,right, red, None, left,-14.16,1.73,1.01,-9.6,1.73,right,TRUE,
+64,right, red, forward, left,-39.94,-20.12,0.62,-40.12,0.62,None,FALSE,Optimal. On coming traffic from left. Agent didn't take right on red
+65,right, green, None, forward,0.64,1.87,-4.97,-20.04,1.87,right,TRUE,
+66,forward, green, forward, left,1.81,0.78,-5.18,0.56,1.81,forward,TRUE,
+67,right, green, left, forward,0.81,1.96,-4.1,-17.11,1.96,right,TRUE,
+68,left, red, forward, left,-40.15,-20.2,1.92,-40.12,1.92,None,FALSE,
+69,forward, red, left, left,-10.08,0.59,1.16,-9.93,1.16,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+70,left, red, right, forward,-8.2,0.84,2.38,-12.5,2.38,None,FALSE,
+71,left, red, None, None,-10.3,1.08,2,-10.46,2,None,FALSE,
+72,left, green, left, right,0.84,0.25,-4.4,-18.49,0.84,forward,FALSE,"Intended direction - left, signal - green, oncoming traffic direction - right. Agent moved forward to avoid accident"
+73,forward, red, None, forward,-10.1,0.7,1.95,-13.63,1.95,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+74,right, red, left, left,-9.6,1.58,0.74,-9.9,1.58,right,TRUE,
+75,left, red, left, right,-22.82,0.55,1.37,-40.29,1.37,None,FALSE,
+76,left, red, forward, forward,-39.32,-20.04,1.03,-39.52,1.03,None,FALSE,
+77,left, red, forward, None,-39.88,-19.36,1.93,-40.5,1.93,None,FALSE,
+78,forward, red, None, right,-14.42,0.42,1.68,-40.43,1.68,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+79,forward, green, right, None,2.32,1.11,-4.74,1.19,2.32,forward,TRUE,
+80,left, green, None, None,0.92,0.3,-5.03,2.32,2.32,left,TRUE,
+81,left, red, right, None,-13.53,0.75,1.87,-9.38,1.87,None,FALSE,
+82,right, green, right, right,0,1.81,0,-9.56,1.81,right,TRUE,
+83,left, red, None, forward,-9.62,1.13,1.76,-10.49,1.76,None,FALSE,
+84,forward, red, left, None,-17.71,0.92,2.34,-9.85,2.34,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+85,forward, red, forward, None,-40.57,-20.1,2.16,-40.55,2.16,None,FALSE,"Optimal. Intended direction - forward, signal - red, agent didn't move"
+86,forward, green, right, left,1.78,0.57,-5.54,1.1,1.78,forward,TRUE,
+87,forward, green, None, right,1.91,0.83,-5.19,-19.5,1.91,forward,TRUE,
+88,right, red, forward, right,-35.13,-17.82,1.11,-30.02,1.11,None,FALSE,Optimal. On coming traffic from left. Agent didn't take right on red
+89,left, green, forward, forward,1.07,0,-5.29,-19.85,1.07,forward,FALSE,
+90,right, red, None, right,-11.83,2.04,0.49,-40.1,2.04,right,TRUE,
+91,right, red, right, None,-11.93,2,0.5,-10.07,2,right,TRUE,
+92,right, red, left, None,-32.18,2.12,0.7,-10.54,2.12,right,TRUE,
+93,left, red, None, right,-9.85,0.4,1.73,-40.25,1.73,None,FALSE,
+94,right, red, right, right,0,1.79,0,-19.75,1.79,right,TRUE,
+95,right, red, None, forward,-32.98,1.66,0.6,-17.65,1.66,right,TRUE,
+96,right, red, left, forward,-9.24,2.35,1.11,-8.75,2.35,right,TRUE,
