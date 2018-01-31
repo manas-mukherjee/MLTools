@@ -11840,7 +11840,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import the visualization code</span>
@@ -12003,7 +12003,7 @@ Run the agent.py file after setting the flags from projects/smartcab folder inst
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_no-learning&#39; log file from the initial simulation results</span>
@@ -13144,7 +13144,7 @@ YJmZmZmZmVWJEywzMzMzM7MqcYJlZmZmZmZWJf8PRdMjdnGU/iQAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Decision Frequency Calculation Logic</span>
@@ -13210,7 +13210,7 @@ Total bad decision : 277 , total accidents count 62
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Reference : Training Trials </span>
@@ -13405,7 +13405,7 @@ Total bad decision : 277 , total accidents count 62
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">net_reward_nd</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;net_reward&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;net_reward&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;net_reward&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
@@ -13571,7 +13571,6 @@ In 20 trial runs, this smart cab took 277 bad decisions which caused accidents 6
 <ul>
 <li><p><font color="green">**Safety**</font> - Here is the list of relevant features for learning safety. Without considering these inputs, the agent may take bad desions(traffic violation) and/or cause accidents.</p>
 <ul>
-<li>waypoint : this feature gives guidence on the driving direction. Reference - <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">L1 Distance</a></li>
 <li>input-light : The Smartcab must learn the significance of various states(in this case red/green) of traffic signals.</li>
 <li>input-left : This is essential to know while taking the right turn on a red signal. </li>
 <li>input-oncoming : The SmartCab should learn this to take proper <em>'left turn on green signal'</em> and <em>'right turn on red'</em>.</li>
@@ -13581,7 +13580,7 @@ In 20 trial runs, this smart cab took 277 bad decisions which caused accidents 6
 <ul>
 <li><p><font color="green">**Efficiency**</font></p>
 <ul>
-<li>deadline : A driving agent that frequently fails to reach the destination in time would be considered unreliable. It can't aford to take a long route for reaching the destination. To be efficient, it must understand the significance of remaning steps/deadline and select an optimal path accordingly. </li>
+<li>waypoint : this feature gives guidence on the driving direction. Reference - <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">L1 Distance</a></li>
 </ul>
 </li>
 </ul>
@@ -13595,7 +13594,13 @@ In 20 trial runs, this smart cab took 277 bad decisions which caused accidents 6
 <li>Reference - <a href="https://www.youtube.com/watch?v=T3gkt5Xvgd8">Turning right on red</a></li>
 </ul>
 </li>
-<li>deadline - Since deadline is a continuous value, so couldn't be added in the defination of the 'state' variable. It will increase the state space and data/trianing requirement of the model. </li>
+<li><p>deadline</p>
+<ul>
+<li>:  Since deadline is a continuous value, so couldn't be added in the defination of the 'state' variable. It will increase the state space and data/trianing requirement of the model. </li>
+<li>: A driving agent that frequently fails to reach the destination in time would be considered unreliable. It can't aford to take a long route for reaching the destination. To be efficient, it must understand the significance of remaning steps/deadline and select an optimal path accordingly. 
+** NOTES from the 2nd reviewer : The truth of the matter is that the deadline could not make the agent more efficient at all, mainly because illegal actions (e.g. running red lights) are not executed by the simulator, just penalized."</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -13734,7 +13739,7 @@ $$ \epsilon_{t+1} = \epsilon_{t} - 0.05, \hspace{10px}\textrm{for trial number }
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_default-learning&#39; file from the default Q-Learning simulation</span>
@@ -14976,7 +14981,7 @@ N27Q8Bfc+fg3AAAAAElFTkSuQmCC
 </li>
 <li><p><font color="blue">No. of training trials</font></p>
 <ul>
-<li>20 training trials are used beforing starting the testing trials. The epsilon value became less than 0.5 starting from 0.95 following the linear decaying function. When the total training trial count is 20 then the epsilon value(accroding datasheet - 3.191891195797325e-16) became less the the default tolerance(0.05).</li>
+<li>20 training trials are used beforing starting the testing trials. The epsilon value became less than 0.5 starting from 0.95 following the linear decaying function. When the total training trial count is 20 then the epsilon value became 0 which is less than the default tolerance(0.05).</li>
 </ul>
 </li>
 <li><p><font color="blue">decaying function</font></p>
@@ -15043,7 +15048,7 @@ $$ \epsilon = a^t, \textrm{for } 0 < a < 1 \hspace{50px}\epsilon = \frac{1}{t^2}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -17271,19 +17276,19 @@ zMza5P8B7s1IwLs+3nYAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ol>
-<li><p><font color="blue">Epsilon decay function</font></p>
+<li><p>Epsilon decay function</p>
 <ul>
 <li>Function Ref - ϵ=e−at,for 0&lt;a&lt;1</li>
 <li><strong>a = 0.002</strong></li>
 <li>Code Ref - self.epsilon = math.exp(-0.002 * self.total_trials). Initial value of epsilon is 1. </li>
 </ul>
 </li>
-<li><p><font color="blue">Training Trials</font></p>
+<li><p>Training Trials&lt;/font&gt;</p>
 <ul>
 <li><strong>~1800</strong> training trials are used to train the model. After 1800 trials, the value of epsilon became less than the defined tolerance limit and the number'total bad desision' frequency(and its sub-components like 'major accident') became close to zero. </li>
 </ul>
 </li>
-<li><p><font color="blue">Learning Rate(alpha) and Epsilon Tolerance</font></p>
+<li><p>Learning Rate(alpha) and Epsilon Tolerance</p>
 <ul>
 <li>In this experiment, Epsilon tolerance is <strong>0.03</strong> and 'Learning Rate'(alpha) is <strong>0.5</strong>. 
 -'Learning Rate' was used to find the 'weighted mean'(or expected) value of the reward of any given state/action pair. It is used it to update the Q-value. </li>
@@ -17291,24 +17296,26 @@ zMza5P8B7s1IwLs+3nYAAAAASUVORK5CYII=
 <li><p>'Epsilon tolerance' - A decaying 'epsilon' parameter was used to give the model a chance of 'leveraging its learning'(exploitation) and explore other possible options by taking some random actions (exploration). Higher values of epsilon forced the model to take random actions with 'epsilon' probability. The decayed(using exp) epsilon value gradually reduced to the tolerance limit and equipped the model to depend more its leraning(max Q-values in any given state-action pair) instead of taking random actions.</p>
 <p>PN - When 'Nos. of Test trials'(n_test) was set to smaller values( like 20/30), then the model worked really well with 'cos' function. However, it didn't work when the test trial values were high. 
 (I need to find a more robust and systemtic strategy to find the optimal parameters. Looking forward to your suggestion on this.)</p>
+<p>NOTES from the 2nd reviewer - 
+-<strong><em>"If you're looking for a robust parameter optimization algorithm, you can try grid search and similar, more advanced methods. However, it often makes sense to consider the characteristics of the environment and make your decisions based on that. 
+In this case, we know that: The rewards don't change over time -&gt; We can assume that the first reward is accurate and set alpha to 1.0 for fast learning.
+There is no real issue with making mistakes during training (i.e. the agent doesn't have to start over just because it made a single bad move) -&gt; It's best to explore as much as possible, so keeping epsilon high for a longer period would be a good idea"</em></strong></p>
 </li>
 </ul>
 </li>
-<li><p><font color="blue">Q-Learner when compared to the default Q-Learner</font></p>
+<li><p>Q-Learner when compared to the default Q-Learner</p>
 <ul>
 <li>Optimized learning(with decaying epsilon factor) is significantly better than the default learning.</li>
 <li>'Safety Rating' has increased to 'A+' from 'D'.</li>
 <li>'Reliability Rating' has increased to 'A' from 'B'.</li>
 </ul>
 </li>
-<li><p><font color="blue">Measure of successful learning </font></p>
+<li><p>Measure of successful learning</p>
 <ul>
 <li>Here, the result of the 100 test trials indicates that the agent successfully learned the appropriate policies.</li>
 </ul>
 </li>
-</ol>
-<ol>
-<li><p><font color="blue">Performance tuning/optimization </font></p>
+<li><p>Performance tuning/optimization( safety and reliability ratings )</p>
 <ul>
 <li>Not satisfied with the sub-optimal reliability rating('A). It can/should be improved to make it perfect.</li>
 </ul>
@@ -17433,7 +17440,7 @@ An 'optimal policy' represents the best candidate among the set of available pol
 <td style="text-align:left">-9.57</td>
 <td style="text-align:left">0.4</td>
 <td style="text-align:left">right</td>
-<td style="text-align:left">SubOptimal. The agent should have taken right. </td>
+<td style="text-align:left">SubOptimal. The agent should have moved forward. </td>
 </tr>
 </tbody>
 </table>
@@ -17453,7 +17460,7 @@ An 'optimal policy' represents the best candidate among the set of available pol
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;logs/sim_improved-learning-qtable.csv&quot;</span><span class="p">)</span>
@@ -17618,6 +17625,16 @@ An 'optimal policy' represents the best candidate among the set of available pol
 <blockquote><p><strong>Note</strong>: Once you have completed all of the code implementations and successfully answered each question above, you may finalize your work by exporting the iPython Notebook as an HTML document. You can do this by using the menu above and navigating to<br>
 <strong>File -&gt; Download as -&gt; HTML (.html)</strong>. Include the finished document along with this notebook as your submission.</p>
 </blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Further-Reading">Further Reading<a class="anchor-link" href="#Further-Reading">&#182;</a></h2><p><a href="https://github.com/openai/gym">https://github.com/openai/gym</a></p>
 
 </div>
 </div>
