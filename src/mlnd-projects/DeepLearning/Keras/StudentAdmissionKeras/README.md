@@ -1,5 +1,5 @@
 
-Data - UCLA: 'http://www.ats.ucla.edu/stat/data/binary.csv'
+pwdData - UCLA: 'http://www.ats.ucla.edu/stat/data/binary.csv'
 
 # aind2-dl
 
