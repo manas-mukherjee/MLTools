@@ -1,10 +1,9 @@
 View Project -
 
 Residual Network Tutorial
-http://htmlpreview.github.io/?https://github.com/manas-mukherjee/MLTools/blob/master/src/dl-andrewng/notebooks/Course4-Week3/face_verification_recognition/FaceRecognitionfortheHappyHouse-v3.html
+http://htmlpreview.github.io/?https://github.com/manas-mukherjee/MLTools/blob/master/src/dl-andrewng/notebooks/Course4-Week4/face_verification_recognition/FaceRecognitionfortheHappyHouse-v3.html
 
-
-** What you should remember **:
+** What we should remember **:
 
 - Face verification solves an easier 1:1 matching problem; face recognition addresses a harder 1:K matching problem.
 - The triplet loss is an effective loss function for training a neural network to learn an encoding of a face image.
