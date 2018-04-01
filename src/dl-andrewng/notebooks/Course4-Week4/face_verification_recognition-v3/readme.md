@@ -1,7 +1,7 @@
 View Project -
 
 Residual Network Tutorial
-http://htmlpreview.github.io/?https://github.com/manas-mukherjee/MLTools/blob/master/src/dl-andrewng/notebooks/Course4-Week4/face_verification_recognition/FaceRecognitionfortheHappyHouse-v3.html
+http://htmlpreview.github.io/?https://github.com/manas-mukherjee/MLTools/blob/master/src/dl-andrewng/notebooks/Course4-Week4/face_verification_recognition-v3/FaceRecognitionfortheHappyHouse-v3.html
 
 ** What we should remember **:
 
