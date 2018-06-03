@@ -34,23 +34,45 @@ References -
 1. Worldwide trends in diabetes since 1980:  https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(16)00618-8.pdf
 2. Machine Learning for Managing Diabetes: 5 Current Use Cases: https://www.techemergence.com/machine-learning-managing-diabetes-5-current-use-cases/
 3. How Machine Learning Is Helping Us Predict Heart Disease and Diabetes: https://hbr.org/2017/05/how-machine-learning-is-helping-us-predict-heart-disease-and-diabetes
+4. ML and Data Mining Methods in Diabetes Research: https://www.sciencedirect.com/science/article/pii/S2001037016300733
 
 ### Problem Statement
 
 The goal of this project is to build a machine learning model to predict the onset of diabetes based on some diagnostic measures.
-
 The expected outcome of this project is to contribute in the clinical research study related to diabetes.
 
-* Main Objective >
+* Main Objective:
 Build a mathematical model to predict whether or not a patient has diabetes, based on certain diagnostic measurements.
 
-* Secondary Objective >
+* Secondary Objective:
 Identify important indicateors or a cluster of features that cause diabetes.
 
 ### Datasets and Inputs
-_(approx. 2-3 paragraphs)_
 
-In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described,
+such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained,
+and the characteristics of the dataset or input, should be included with relevant references and citations as necessary.
+ It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+
+* Source
+https://www.kaggle.com/uciml/pima-indians-diabetes-database
+This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases.
+
+* Content
+The datasets consists of **8 medical predictor** variables and **one target variable** - Outcome corresponding to the **768 persons**.
+Here is the list of predictor variables with their brief description.
+
+|Feature Name| Description |Datetype |
+|:-------------|:-------------|:-----|
+|Pregnancies | Number of times pregnant |Numeric|
+|Glucose | Plasma glucose concentration a 2 hours in an oral glucose tolerance test|Numeric|
+|BloodPressure|Diastolic blood pressure (mm Hg)|Numeric|
+|SkinThickness|Triceps skin fold thickness (mm)|Numeric|
+|Insulin|2-Hour serum insulin (mu U/ml)|Numeric|
+|BMI|Body mass index (weight in kg/(height in m)^2)|Numeric|
+|DiabetesPedigreeFunction|Diabetes pedigree function|Numeric|
+|Age|Age (years)|Numeric|
+|**Outcome**|Class variable (0 or 1)|Numeric|
 
 ### Solution Statement
 _(approx. 1 paragraph)_
