@@ -19,13 +19,13 @@ over time leads to serious damage to many of the body's systems, especially the 
 Leading compnaies as well as startups are actively working on this specific healthcare domain and coming up with AI powered applications on use-cases like
 Glucose Monitoring Systems, Nutrition Coaching, Early Diagnosis Tools etc.
 
-##Motivation
+## Motivation
 
 In the last two yearly health check, my blood-sugar(glucose) level and BMI were above the normal range.
 Note -
 
 Glucose : Reference Range: 65-99 mg/dL
-BMI : Reference Range: 18.5-24.9 (calc)    
+BMI : Reference Range: 18.5-24.9 (calc)
 
 Since these two factors indicate a pre-diabetes tendency, I would like to take some proactive measures to prevent any future suffering.
 The motivation behind working on this important domains is to increase self-awareness and apply my newly learned ML skills in a real-world problem.
@@ -41,10 +41,11 @@ _(approx. 1 paragraph)_
 The goal of this project is to build a machine learning model to predict the onset of diabetes based on some diagnostic measures.
 
 The expected outcome of this project is to contribute in the clinical research study related to diabetes.
-Main Objective -
-Build a mathematical model to predict whether or not a patient has diabetes, based on certain diagnostic measurements.
 
-Secondary Objective -
+Main Objective >
+Build a mathematical model to predict whether or not a patient has diabetes, based on certain diagnostic measurements.  
+
+Secondary Objective >
 Identify important indicateors or a cluster of features that cause diabetes.
 
 ### Datasets and Inputs
