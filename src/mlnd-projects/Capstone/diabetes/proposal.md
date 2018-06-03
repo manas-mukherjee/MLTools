@@ -4,7 +4,6 @@ Manas Mukherjee
 May 29th, 2018
 
 ## Proposal
-_(approx. 2-3 pages)_
 
 ### Domain Background
 
@@ -73,6 +72,24 @@ Here is the list of predictor variables with their brief description.
 |DiabetesPedigreeFunction|Diabetes pedigree function|Numeric|
 |Age|Age (years)|Numeric|
 |**Outcome**|Class variable (0 or 1)|Numeric|
+
+* Constraint
+Several constraints were placed on the selection of these instances from a larger database.
+In particular, all patients here are females at least 21 years old of **Pima Indian** heritage.
+
+* Background details and important characteristics of Pima people
+The Pima are a group of Native Americans living in an area consisting of what is now central and southern Arizona.
+The majority population of the surviving two bands of the Akimel O'odham are based in two reservations:
+the Keli Akimel O'otham on the Gila River Indian Community (GRIC) and the On'k Akimel O'odham on the Salt River Pima-Maricopa Indian Community (SRPMIC).
+
+The Keli Akimel O'odham and the Onk Akimel O'odham have various environmentally based health issues related to the decline of their traditional economy and farming.
+They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations.
+While they do not have a greater risk than other tribes, the Pima people have been the subject of intensive study of diabetes, in part because they form a homogeneous group
+
+Source -
+1. Wikipedia - https://en.wikipedia.org/wiki/Pima_people
+2. Smith-Morris, Carolyn. "Diabetes Among the Pima: Stories of Survival". Tucson: University of Arizona Press, 2006. ISBN 978-0816527328.
+Summary of the above book - https://muse.jhu.edu/article/450458/summary
 
 ### Solution Statement
 _(approx. 1 paragraph)_
