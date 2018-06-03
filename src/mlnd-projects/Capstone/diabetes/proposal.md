@@ -7,14 +7,44 @@ May 29th, 2018
 _(approx. 2-3 pages)_
 
 ### Domain Background
-_(approx. 1-2 paragraphs)_
 
-In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
+Diabetes is a leading chronic disease that affects more than 30 million people in the United States.
+The economic impact of diabetes is estimated at $105 billion, according to a study published in 2016 and led by researchers from Imperial College London,
+Harvard T.H. Chan School of Public Health and the World Health Organization.
+
+It is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces.
+Insulin is a hormone that regulates blood sugar. Hyperglycaemia, or raised blood sugar, is a common effect of uncontrolled diabetes and
+over time leads to serious damage to many of the body's systems, especially the nerves and blood vessels.
+
+Leading compnaies as well as startups are actively working on this specific healthcare domain and coming up with AI powered applications on the following 3 use-cases.
+1. Glucose Monitoring Systems
+2. Nutrition Coaching
+3. Early Diagnosis Tools
+
+##Motivation
+In the last two yearly health check, my blood-sugar(glucose) level and BMI were above the normal range.
+Note -
+Glucose : Reference Range: 65-99 mg/dL
+BMI : Reference Range: 18.5-24.9 (calc)
+Since these two factors indicate a pre-diabetes tendency, I would like to take some proactive measures to prevent any future suffering.
+The motivation behind working on this important domains is to increase self-awareness and apply my newly learned ML skills in a real-world problem.
+
+References -
+1. Worldwide trends in diabetes since 1980:  https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(16)00618-8.pdf
+2. Machine Learning for Managing Diabetes: 5 Current Use Cases: https://www.techemergence.com/machine-learning-managing-diabetes-5-current-use-cases/
+3. How Machine Learning Is Helping Us Predict Heart Disease and Diabetes: https://hbr.org/2017/05/how-machine-learning-is-helping-us-predict-heart-disease-and-diabetes
 
 ### Problem Statement
 _(approx. 1 paragraph)_
 
-In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
+The goal of this project is to build a machine learning model to predict the onset of diabetes based on some diagnostic measures.
+
+The expected outcome of this project is to contribute in the clinical research study related to diabetes.
+Main Objective -
+Build a mathematical model to predict whether or not a patient has diabetes, based on certain diagnostic measurements.
+
+Secondary Objective -
+Identify important indicateors or a cluster of features that cause diabetes.
 
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
