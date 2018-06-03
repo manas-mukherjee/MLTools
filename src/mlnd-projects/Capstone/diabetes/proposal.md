@@ -24,8 +24,8 @@ Glucose Monitoring Systems, Nutrition Coaching, Early Diagnosis Tools etc.
 In the last two yearly health check, my blood-sugar(glucose) level and BMI were above the normal range.
 Note -
 
-Glucose : Reference Range: 65-99 mg/dL
-BMI : Reference Range: 18.5-24.9 (calc)
+* Glucose : Reference Range: 65-99 mg/dL
+* BMI : Reference Range: 18.5-24.9 (calc)  
 
 Since these two factors indicate a pre-diabetes tendency, I would like to take some proactive measures to prevent any future suffering.
 The motivation behind working on this important domains is to increase self-awareness and apply my newly learned ML skills in a real-world problem.
@@ -84,8 +84,8 @@ The majority population of the surviving two bands of the Akimel O'odham are bas
 the Keli Akimel O'otham on the Gila River Indian Community (GRIC) and the On'k Akimel O'odham on the Salt River Pima-Maricopa Indian Community (SRPMIC).
 
 The Keli Akimel O'odham and the Onk Akimel O'odham have various environmentally based health issues related to the decline of their traditional economy and farming.
-They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations.
-While they do not have a greater risk than other tribes, the Pima people have been the subject of intensive study of diabetes, in part because they form a homogeneous group
+**They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations.**
+While they do not have a greater risk than other tribes, **the Pima people have been the subject of intensive study of diabetes, in part because they form a homogeneous group.**
 
 Source -
 1. Wikipedia - https://en.wikipedia.org/wiki/Pima_people
