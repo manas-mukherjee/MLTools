@@ -21,11 +21,11 @@ Glucose Monitoring Systems, Nutrition Coaching, Early Diagnosis Tools etc.
 
 #### Motivation
 
-In the last two yearly health check, my blood-sugar(glucose) level and BMI were above the normal range.
+In the last two yearly health checkups, my blood-sugar(glucose) level and BMI were above the normal range.
 Note -
 
 * Glucose : Reference Range: 65-99 mg/dL
-* BMI : Reference Range: 18.5-24.9 (calc)  
+* BMI : Reference Range: 18.5-24.9 (calc)
 
 Since these two factors indicate a pre-diabetes tendency, I would like to take some proactive measures to prevent any future suffering.
 The motivation behind working on this important domains is to increase self-awareness and apply my newly learned ML skills in a real-world problem.
@@ -93,9 +93,18 @@ Source -
 Summary of the above book - https://muse.jhu.edu/article/450458/summary
 
 ### Solution Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+The data includes a binary predition variable **outcome**. Since the model will predict this outcome(true/false), it is considered as a **supervised 'binary classification'** task.
+
+Supervised: The given dataset has diagnostic features of several individuals and a corresponding lable that indicates presense or absense of the diabeties disease.
+In this task, we will train the model with a subset of the given data and use the other part of the data for testing.
+
+Classification: The goal of this classification function is to predict the outcome given the diagnostic values.
+As part of the process, we will try different binary classification models using standard algorithms like SVM, Decision Tree, Logistic Regression etc and will find out the best model
+after doing a comparative analysis.
+We will also experiment with different model specific hyper-parameters to find the optimized model.
+
+Furthermore, we will do a thorough 'feature importance analysis', clustering using PCA to understand the key feature or set of features that drive the outcome.
 
 ### Benchmark Model
 _(approximately 1-2 paragraphs)_
