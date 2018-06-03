@@ -16,16 +16,17 @@ It is a chronic disease that occurs either when the pancreas does not produce en
 Insulin is a hormone that regulates blood sugar. Hyperglycaemia, or raised blood sugar, is a common effect of uncontrolled diabetes and
 over time leads to serious damage to many of the body's systems, especially the nerves and blood vessels.
 
-Leading compnaies as well as startups are actively working on this specific healthcare domain and coming up with AI powered applications on the following 3 use-cases.
-1. Glucose Monitoring Systems
-2. Nutrition Coaching
-3. Early Diagnosis Tools
+Leading compnaies as well as startups are actively working on this specific healthcare domain and coming up with AI powered applications on use-cases like
+Glucose Monitoring Systems, Nutrition Coaching, Early Diagnosis Tools etc.
 
 ##Motivation
+
 In the last two yearly health check, my blood-sugar(glucose) level and BMI were above the normal range.
 Note -
+
 Glucose : Reference Range: 65-99 mg/dL
-BMI : Reference Range: 18.5-24.9 (calc)
+BMI : Reference Range: 18.5-24.9 (calc)    
+
 Since these two factors indicate a pre-diabetes tendency, I would like to take some proactive measures to prevent any future suffering.
 The motivation behind working on this important domains is to increase self-awareness and apply my newly learned ML skills in a real-world problem.
 
