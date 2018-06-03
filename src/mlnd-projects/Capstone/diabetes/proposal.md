@@ -1,5 +1,6 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
+
 Manas Mukherjee
 May 29th, 2018
 
@@ -73,11 +74,11 @@ Here is the list of predictor variables with their brief description.
 |Age|Age (years)|Numeric|
 |**Outcome**|Class variable (0 or 1)|Numeric|
 
-* Constraint
+#### Constraint
 Several constraints were placed on the selection of these instances from a larger database.
 In particular, all patients here are females at least 21 years old of **Pima Indian** heritage.
 
-* Background details and important characteristics of Pima people
+#### Background details and important characteristics of Pima people
 The Pima are a group of Native Americans living in an area consisting of what is now central and southern Arizona.
 The majority population of the surviving two bands of the Akimel O'odham are based in two reservations:
 the Keli Akimel O'otham on the Gila River Indian Community (GRIC) and the On'k Akimel O'odham on the Salt River Pima-Maricopa Indian Community (SRPMIC).
