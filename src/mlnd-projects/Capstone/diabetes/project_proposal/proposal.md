@@ -5,8 +5,6 @@ Name:Manas Mukherjee
 
 Date:May 29th, 2018
 
-## Proposal
-
 ### Domain Background
 
 Diabetes is a leading chronic disease that affects more than 30 million people in the United States.
@@ -83,7 +81,7 @@ The Keli Akimel O'odham and the Onk Akimel O'odham have various environmentally 
 **They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations.**
 While they do not have a greater risk than other tribes, **the Pima people have been the subject of intensive study of diabetes, in part because they form a homogeneous group.**
 
-References:  
+References:
 Wikipedia - https://en.wikipedia.org/wiki/Pima_people
 
 ### Solution Statement
