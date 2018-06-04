@@ -83,6 +83,9 @@ The Keli Akimel O'odham and the Onk Akimel O'odham have various environmentally 
 **They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations.**
 While they do not have a greater risk than other tribes, **the Pima people have been the subject of intensive study of diabetes, in part because they form a homogeneous group.**
 
+References:  
+Wikipedia - https://en.wikipedia.org/wiki/Pima_people
+
 ### Solution Statement
 
 The data includes a binary prediction variable **outcome**. Since the model will predict this outcome(true/false), it is considered as a **supervised 'binary classification'** task.
@@ -173,7 +176,6 @@ I'll follow the general machine learning workflow while working on the solution.
 1. https://pandas.pydata.org/pandas-docs/stable/visualization.html
 2. https://www.analyticsvidhya.com/blog/2016/02/7-important-model-evaluation-error-metrics/
 3. https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6
-3. Wikipedia - https://en.wikipedia.org/wiki/Pima_people
-5. Smith-Morris, Carolyn. "Diabetes Among the Pima: Stories of Survival". Tucson: University of Arizona Press, 2006. ISBN 978-0816527328.
+4. Smith-Morris, Carolyn. "Diabetes Among the Pima: Stories of Survival". Tucson: University of Arizona Press, 2006. ISBN 978-0816527328.
 Summary of the above book - https://muse.jhu.edu/article/450458/summary
 -----------
