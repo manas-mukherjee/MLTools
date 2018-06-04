@@ -134,7 +134,8 @@ Since this model will be used to desease diagnosis, we will try to minimize the 
 In this case, we would use F2 Score since it favors 'recall' over 'precision'.
 
 * Related formula
-    Fβ score = (1+β2) * ( precision⋅recall / (β2⋅precision)+recall )
+
+    Fβ score = (1+β2) * (precision⋅recall / (β2⋅precision)+recall)
     In this cases, β = 2.
 
     Precision = [True Positives/(True Positives + False Positives)]
