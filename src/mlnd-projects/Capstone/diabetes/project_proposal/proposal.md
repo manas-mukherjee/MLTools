@@ -5,6 +5,8 @@ Name:Manas Mukherjee
 
 Date:May 29th, 2018
 
+
+
 ### Domain Background
 
 Diabetes is a leading chronic disease that affects more than 30 million people in the United States.
@@ -17,6 +19,7 @@ over time leads to serious damage to many of the body's systems, especially the 
 
 Leading companies, as well as startups, are actively working on this specific healthcare domain and coming up with AI-powered applications on use-cases like
 Glucose Monitoring Systems, Nutrition Coaching, Early Diagnosis Tools etc.
+
 
 #### Motivation
 
@@ -35,6 +38,8 @@ References -
 3. How Machine Learning Is Helping Us Predict Heart Disease and Diabetes: https://hbr.org/2017/05/how-machine-learning-is-helping-us-predict-heart-disease-and-diabetes
 4. ML and Data Mining Methods in Diabetes Research: https://www.sciencedirect.com/science/article/pii/S2001037016300733
 
+
+
 ### Problem Statement
 
 The goal of this project is to build a machine learning model to predict the onset of diabetes based on some diagnostic measures.
@@ -45,6 +50,8 @@ Build a mathematical model to predict whether or not a patient has diabetes, bas
 
 * Secondary Objective:
 Identify important features or a set of clusters of features that are highly related to diabetes.
+
+
 
 ### Datasets and Inputs
 
@@ -83,6 +90,8 @@ While they do not have a greater risk than other tribes, **the Pima people have 
 
 Reference: Wikipedia - https://en.wikipedia.org/wiki/Pima_people
 
+
+
 ### Solution Statement
 
 The data includes a binary prediction variable **outcome**. Since the model will predict this outcome(true/false), it is considered as a **supervised 'binary classification'** task.
@@ -96,6 +105,8 @@ after doing a comparative analysis.
 We will also experiment with different model specific hyper-parameters to find the optimized model.
 
 Furthermore, we will do a thorough 'feature importance analysis', clustering using PCA to understand the key feature or set of features that drive the outcome.
+
+
 
 ### Benchmark Model
 
@@ -119,6 +130,7 @@ A naive benchmark model for this problem would be to predict that none of the pa
     If a patient's BMI is above 27.5 then this model will diagnosis 'diabetes'.
 
 
+
 ### Evaluation Metrics
 
 While evaluating the performance of the benchmark models and best solution model, I will consider the 'model accuracy' using train/test split or K-fold cross-validation.
@@ -135,6 +147,8 @@ In this case, we would use F2 Score since it favors 'recall' over 'precision'.
     **Precision = [True Positives/(True Positives + False Positives)]**
 
     **Recall    = [True Positives/(True Positives + False Negatives)]**
+
+
 
 ### Project Design
 
@@ -169,10 +183,13 @@ I'll follow the general machine learning workflow while working on the solution.
     * Evaluate the feature importance
     * Identify feature cluster(if any) using PCA
 
+
+
 ### References :
 1. https://pandas.pydata.org/pandas-docs/stable/visualization.html
 2. https://www.analyticsvidhya.com/blog/2016/02/7-important-model-evaluation-error-metrics/
 3. https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6
-4. Smith-Morris, Carolyn. "Diabetes Among the Pima: Stories of Survival". Tucson: University of Arizona Press, 2006. ISBN 978-0816527328.
-Summary of the above book - https://muse.jhu.edu/article/450458/summary
+4. Smith-Morris, Carolyn. "Diabetes Among the Pima: Stories of Survival". Summary of the above book - https://muse.jhu.edu/article/450458/summary
+
+
 -----------
