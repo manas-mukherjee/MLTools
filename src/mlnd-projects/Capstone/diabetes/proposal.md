@@ -108,18 +108,25 @@ Furthermore, we will do a thorough 'feature importance analysis', clustering usi
 
 ### Benchmark Model
 
-* Benchmark-1 : Naive Model
+* **Benchmark-1 : Naive Model**
+
 Since 500 out of 768 individuals don't have diabetes, so we would consider this an unbalanced dataset.
 A naive benchmark model for this problem would be to predict that none of the patients have diabeties.
 
-* Benchmark-2 : Domain Knowledge based
+* **Benchmark-2 : Domain Knowledge based**
+
     According wikipedia "They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations".
 
     Type 2 diabetes (formerly called non-insulin-dependent, or adult-onset) results from the body’s ineffective use of insulin.
-    Type 2 diabetes comprises the majority of people with diabetes around the world, and is largely the result of excess body weight and physical inactivity.
+    **Type 2 diabetes comprises the majority of people with diabetes around the world, and is largely the result of excess body weight and physical inactivity.**
 
-    Reference
+
+    According to several legitimate source, Type-2 diabetes is correlated with obesesity and/or BMI.
+    Following article suggests that **Overweight was defined as having a body mass index between 25 and 29.9**.
     http://www.diabetesincontrol.com/body-mass-index-and-type-2-diabetes-risk/
+
+    We'll consider the average(27.5) of the above BMI range(25 to 29.9) as a threashold of this domain knowledge based model.
+    If a patient's BMI is above 27.5 then this model will diagnosis 'diabetes'.
 
 
 ### Evaluation Metrics
