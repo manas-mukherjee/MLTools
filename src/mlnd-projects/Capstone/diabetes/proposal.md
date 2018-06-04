@@ -1,8 +1,9 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
 
-Manas Mukherjee
-May 29th, 2018
+Name:Manas Mukherjee
+
+Date:May 29th, 2018
 
 ## Proposal
 
@@ -48,11 +49,6 @@ Build a mathematical model to predict whether or not a patient has diabetes, bas
 Identify important indicateors or a cluster of features that cause diabetes.
 
 ### Datasets and Inputs
-
-In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described,
-such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained,
-and the characteristics of the dataset or input, should be included with relevant references and citations as necessary.
- It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
 
 * Source
 https://www.kaggle.com/uciml/pima-indians-diabetes-database
