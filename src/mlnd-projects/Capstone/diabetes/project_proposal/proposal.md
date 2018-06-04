@@ -53,7 +53,7 @@ https://www.kaggle.com/uciml/pima-indians-diabetes-database
 This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases.
 
 * Content
-The dataset consists of **8 medical predictors** variables and **one target variable** - Outcome corresponding to the **768 persons**.
+The dataset consists of **8 medical predictors** variables and **one target variable** - 'Outcome' corresponding to the **768 persons**.
 Here is the list of predictor variables with their brief description.
 
 |Feature Name| Description |Datetype |
@@ -70,7 +70,7 @@ Here is the list of predictor variables with their brief description.
 
 #### Constraint
 Several constraints were placed on the selection of these instances from a larger database.
-In particular, all patients here are females at least 21 years old of **Pima Indian** heritage.
+In particular, all patients here are **females** at least **21 years old** of **Pima Indian** heritage.
 
 #### Background details and important characteristics of Pima people
 The Pima are a group of Native Americans living in an area consisting of what is now central and southern Arizona.
@@ -81,8 +81,7 @@ The Keli Akimel O'odham and the Onk Akimel O'odham have various environmentally 
 **They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations.**
 While they do not have a greater risk than other tribes, **the Pima people have been the subject of intensive study of diabetes, in part because they form a homogeneous group.**
 
-References:
-Wikipedia - https://en.wikipedia.org/wiki/Pima_people
+Reference: Wikipedia - https://en.wikipedia.org/wiki/Pima_people
 
 ### Solution Statement
 
@@ -116,7 +115,7 @@ A naive benchmark model for this problem would be to predict that none of the pa
     Following article suggests that **Overweight was defined as having a body mass index between 25 and 29.9**.
     http://www.diabetesincontrol.com/body-mass-index-and-type-2-diabetes-risk/
 
-    We'll consider the average(27.5) of the above BMI range(25 to 29.9) as a threshold of this domain knowledge-based model.
+    We'll consider the **average(27.5)** of the above BMI range(25 to 29.9) as a threshold of this domain knowledge-based model.
     If a patient's BMI is above 27.5 then this model will diagnosis 'diabetes'.
 
 
