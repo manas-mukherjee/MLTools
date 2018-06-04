@@ -128,7 +128,7 @@ A naive benchmark model for this problem would be to predict that none of the pa
 ### Evaluation Metrics
 
 While evaluating the performance of the benchmark models and best solution model, we will leverage the 'model accuracy' using train/test split or K-fold cross validation.
-The input dataset is bit unbalanced(~35%:65%) w.r.t the predition variable 'outcome', so we will definately consider the 'recall' factor.
+The input dataset is bit unbalanced(~35%:65%) w.r.t the predition variable 'outcome', so we will definately consider the 'recall' factor and use 'confusion matrix' to measure different types of prediction.
 Since this model will be used to desease diagnosis, we will try to minimize the 'false negative' type error (i.e A result that appears negative when it should not).
 
 In this case, we would use F2 Score since it favors 'recall' over 'precision'.
@@ -148,7 +148,7 @@ I'll follow the general machine learning workflow while working on the solution.
 
 1. Identify Environtment and Libraries
     * Language and Version : Python(Conda distribution) - 2.7
-    * Libraries : Pandas, Scikit-learn, Matplotlib, Seaborn etc.
+    * Libraries : Pandas, Scikit-learn, Matplotlib, Seaborn etc. Others libs will be added if required.
 
 2. Exploratory Analysis and Data Preprocessing
     * Clean missing values(if any)
@@ -175,6 +175,10 @@ I'll follow the general machine learning workflow while working on the solution.
     * Evaluate the feature importance
     * Identify feature cluster(if any) using PCA
 
+### References :
+1. https://pandas.pydata.org/pandas-docs/stable/visualization.html
+2. https://www.analyticsvidhya.com/blog/2016/02/7-important-model-evaluation-error-metrics/
+3. https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6
 
 -----------
 
