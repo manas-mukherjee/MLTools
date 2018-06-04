@@ -51,7 +51,9 @@ Build a mathematical model to predict whether or not a patient has diabetes, bas
 * Secondary Objective:
 Identify important features or a set of clusters of features that are highly related to diabetes.
 
-
+The data includes a binary prediction variable(label) **outcome**.
+In this task, it is required to build a function that will map the set of input features with the binary outcome(true/false).
+I would consider this as a **supervised 'binary classification'** task.  
 
 ### Datasets and Inputs
 
@@ -190,6 +192,6 @@ I'll follow the general machine learning workflow while working on the solution.
 2. https://www.analyticsvidhya.com/blog/2016/02/7-important-model-evaluation-error-metrics/
 3. https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6
 4. Smith-Morris, Carolyn. "Diabetes Among the Pima: Stories of Survival". Summary of the above book - https://muse.jhu.edu/article/450458/summary
-
+5. My MLND assignment: http://htmlpreview.github.io/?https://github.com/manas-mukherjee/machine-learning-nanodegree/blob/master/SupervisedLearning/finding_donors/report.html
 
 -----------
