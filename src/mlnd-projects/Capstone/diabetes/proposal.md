@@ -109,7 +109,7 @@ Furthermore, we will do a thorough 'feature importance analysis', clustering usi
 Since 500 out of 768 individuals don't have diabetes, so we would consider this an unbalanced dataset.
 A naive benchmark model for this problem would be to predict that none of the patients have diabeties.
 
-* **Benchmark-2 : Domain Knowledge based**
+* **Benchmark-2 : Domain Knowledge based Model**
 
     According wikipedia "They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations".
 
@@ -126,24 +126,19 @@ A naive benchmark model for this problem would be to predict that none of the pa
 
 
 ### Evaluation Metrics
-_(approx. 1-2 paragraphs)_
-
-
-In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
 
 While evaluating the performance of the benchmark models and best solution model, we will leverage the 'model accuracy' using train/test split or K-fold cross validation.
 The input dataset is bit unbalanced(~35%:65%) w.r.t the predition variable 'outcome', so we will definately consider the 'recall' factor.
 Since this model will be used to desease diagnosis, we will try to minimize the 'false negative' type error (i.e A result that appears negative when it should not).
 
-One way to evaluate the performance of the benchmark model and the solution model is to measure accuracy using cross-validation. Accuracy is defined as the number of correct predictions from all the predictions made. But it is not the best metric in this case due to the unbalanced classes (~20% class 'leave' vs ~80 class 'not leave'). Instead, a confusion matrix would give an unambiguous way to show the prediction results of the classifiers.
-We can also obtain precision and recall from the classification results. Precision is the number of True Positives (TP) divided by the number of True Positives (TP) and False Positives (FP). A low precision indicates a large number of FP. Recall is the number of True Positives (TP) divided by the number of True Positives (TP) and the number of False Negatives (FN). A low recall indicates a large number of FN.
+In this case, we would use F2 Score since it favors 'recall' over 'precision'.
 
-In this case, we would use F2 Score since it favors 'recall' than 'precision'
-Fβ score = (1+β2) * ( precision⋅recall / (β2⋅precision)+recall )
-In this cases, β = 2.
+* Related formula
+    Fβ score = (1+β2) * ( precision⋅recall / (β2⋅precision)+recall )
+    In this cases, β = 2.
 
-Precision = [True Positives/(True Positives + False Positives)]
-Recall    = [True Positives/(True Positives + False Negatives)]
+    Precision = [True Positives/(True Positives + False Positives)]
+    Recall    = [True Positives/(True Positives + False Negatives)]
 
 ### Project Design
 
