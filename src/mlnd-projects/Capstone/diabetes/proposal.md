@@ -17,7 +17,7 @@ It is a chronic disease that occurs either when the pancreas does not produce en
 Insulin is a hormone that regulates blood sugar. Hyperglycaemia, or raised blood sugar, is a common effect of uncontrolled diabetes and
 over time leads to serious damage to many of the body's systems, especially the nerves and blood vessels.
 
-Leading compnaies as well as startups are actively working on this specific healthcare domain and coming up with AI powered applications on use-cases like
+Leading companies, as well as startups, are actively working on this specific healthcare domain and coming up with AI-powered applications on use-cases like
 Glucose Monitoring Systems, Nutrition Coaching, Early Diagnosis Tools etc.
 
 #### Motivation
@@ -40,13 +40,13 @@ References -
 ### Problem Statement
 
 The goal of this project is to build a machine learning model to predict the onset of diabetes based on some diagnostic measures.
-The expected outcome of this project is to contribute in the clinical research study related to diabetes.
+The expected outcome of this project is to contribute to the clinical research study related to diabetes.
 
 * Main Objective:
 Build a mathematical model to predict whether or not a patient has diabetes, based on certain diagnostic measurements.
 
 * Secondary Objective:
-Identify important indicateors or a cluster of features that cause diabetes.
+Identify important features or a set of clusters of features that are highly related to diabetes.
 
 ### Datasets and Inputs
 
@@ -55,7 +55,7 @@ https://www.kaggle.com/uciml/pima-indians-diabetes-database
 This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases.
 
 * Content
-The datasets consists of **8 medical predictor** variables and **one target variable** - Outcome corresponding to the **768 persons**.
+The dataset consists of **8 medical predictors** variables and **one target variable** - Outcome corresponding to the **768 persons**.
 Here is the list of predictor variables with their brief description.
 
 |Feature Name| Description |Datetype |
@@ -76,23 +76,18 @@ In particular, all patients here are females at least 21 years old of **Pima Ind
 
 #### Background details and important characteristics of Pima people
 The Pima are a group of Native Americans living in an area consisting of what is now central and southern Arizona.
-The majority population of the surviving two bands of the Akimel O'odham are based in two reservations:
+The majority population of the surviving two bands of the Akimel O'odham is based on two reservations:
 the Keli Akimel O'otham on the Gila River Indian Community (GRIC) and the On'k Akimel O'odham on the Salt River Pima-Maricopa Indian Community (SRPMIC).
 
 The Keli Akimel O'odham and the Onk Akimel O'odham have various environmentally based health issues related to the decline of their traditional economy and farming.
 **They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations.**
 While they do not have a greater risk than other tribes, **the Pima people have been the subject of intensive study of diabetes, in part because they form a homogeneous group.**
 
-Source -
-1. Wikipedia - https://en.wikipedia.org/wiki/Pima_people
-2. Smith-Morris, Carolyn. "Diabetes Among the Pima: Stories of Survival". Tucson: University of Arizona Press, 2006. ISBN 978-0816527328.
-Summary of the above book - https://muse.jhu.edu/article/450458/summary
-
 ### Solution Statement
 
-The data includes a binary predition variable **outcome**. Since the model will predict this outcome(true/false), it is considered as a **supervised 'binary classification'** task.
+The data includes a binary prediction variable **outcome**. Since the model will predict this outcome(true/false), it is considered as a **supervised 'binary classification'** task.
 
-Supervised: The given dataset has diagnostic features of several individuals and a corresponding lable that indicates presense or absense of the diabeties disease.
+Supervised: The given dataset has diagnostic features of several individuals and a corresponding label that indicates presence or absence of the diabetes disease.
 In this task, we will train the model with a subset of the given data and use the other part of the data for testing.
 
 Classification: The goal of this classification function is to predict the outcome given the diagnostic values.
@@ -107,29 +102,28 @@ Furthermore, we will do a thorough 'feature importance analysis', clustering usi
 * **Benchmark-1 : Naive Model**
 
 Since 500 out of 768 individuals don't have diabetes, so we would consider this an unbalanced dataset.
-A naive benchmark model for this problem would be to predict that none of the patients have diabeties.
+A naive benchmark model for this problem would be to predict that none of the patients have diabetes.
 
-* **Benchmark-2 : Domain Knowledge based Model**
+* **Benchmark-2 : Domain Knowledge-based Model**
 
-    According wikipedia "They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations".
+    According to the Wikipedia "They have the highest prevalence of type 2 diabetes in the world, much more than is observed in other U.S. populations".
 
     Type 2 diabetes (formerly called non-insulin-dependent, or adult-onset) results from the body’s ineffective use of insulin.
     **Type 2 diabetes comprises the majority of people with diabetes around the world, and is largely the result of excess body weight and physical inactivity.**
 
-
-    According to several legitimate source, Type-2 diabetes is correlated with obesesity and/or BMI.
+    According to several legitimate sources, Type-2 diabetes is correlated with obesity and/or BMI.
     Following article suggests that **Overweight was defined as having a body mass index between 25 and 29.9**.
     http://www.diabetesincontrol.com/body-mass-index-and-type-2-diabetes-risk/
 
-    We'll consider the average(27.5) of the above BMI range(25 to 29.9) as a threashold of this domain knowledge based model.
+    We'll consider the average(27.5) of the above BMI range(25 to 29.9) as a threshold of this domain knowledge-based model.
     If a patient's BMI is above 27.5 then this model will diagnosis 'diabetes'.
 
 
 ### Evaluation Metrics
 
-While evaluating the performance of the benchmark models and best solution model, we will leverage the 'model accuracy' using train/test split or K-fold cross validation.
-The input dataset is bit unbalanced(~35%:65%) w.r.t the predition variable 'outcome', so we will definately consider the 'recall' factor and use 'confusion matrix' to measure different types of prediction.
-Since this model will be used to desease diagnosis, we will try to minimize the 'false negative' type error (i.e A result that appears negative when it should not).
+While evaluating the performance of the benchmark models and best solution model, I will consider the 'model accuracy' using train/test split or K-fold cross-validation.
+The input dataset is bit unbalanced(~35%:65%) w.r.t the prediction variable 'outcome', so I will leverage the 'recall' factor and use 'confusion matrix' to measure different types of prediction.
+Since this model will be used to disease diagnosis, we will try to minimize the 'false negative' type error (i.e A result that appears negative when it should not).
 
 In this case, we would use F2 Score since it favors 'recall' over 'precision'.
 
@@ -146,9 +140,9 @@ In this case, we would use F2 Score since it favors 'recall' over 'precision'.
 
 I'll follow the general machine learning workflow while working on the solution.
 
-1. Identify Environtment and Libraries
-    * Language and Version : Python(Conda distribution) - 2.7
-    * Libraries : Pandas, Scikit-learn, Matplotlib, Seaborn etc. Others libs will be added if required.
+1. Identify Environment and Libraries
+    * Language and Version: Python(Conda distribution) - 2.7
+    * Libraries: Pandas, Scikit-learn, Matplotlib, Seaborn etc. Others libs will be added if required.
 
 2. Exploratory Analysis and Data Preprocessing
     * Clean missing values(if any)
@@ -159,15 +153,15 @@ I'll follow the general machine learning workflow while working on the solution.
 
 3. Experiment with different ML algorithm and find the best one using the above performance metric.
     * Evaluate FB scores using the following supervised algorithms
-        * LogisticRegression
-        * KNeighborsClassifier
+        * Logistic Regression
+        * K-Neighbors Classifier
         * Support Vector Classifier
         * Decision Tree
-        * GaussianNB
+        * Gaussian Naive Bayes
         * Ensemble methods
-        * DeepLearning - MLP
+        * We might use the MultiLayer Perceptron(DL)
         etc
-    * Select top 3 models and perform hyperparameter tuning
+    * Select top 3 models and perform hyper-parameter tuning
     * Evaluate the best model on the testing set
 
 4. Feature Importance and Insights
@@ -179,7 +173,9 @@ I'll follow the general machine learning workflow while working on the solution.
 1. https://pandas.pydata.org/pandas-docs/stable/visualization.html
 2. https://www.analyticsvidhya.com/blog/2016/02/7-important-model-evaluation-error-metrics/
 3. https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6
-
+3. Wikipedia - https://en.wikipedia.org/wiki/Pima_people
+5. Smith-Morris, Carolyn. "Diabetes Among the Pima: Stories of Survival". Tucson: University of Arizona Press, 2006. ISBN 978-0816527328.
+Summary of the above book - https://muse.jhu.edu/article/450458/summary
 -----------
 
 **Before submitting your proposal, ask yourself. . .**
