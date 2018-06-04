@@ -53,7 +53,7 @@ Identify important features or a set of clusters of features that are highly rel
 
 The data includes a binary prediction variable(label) **outcome**.
 In this task, it is required to build a function that will map the set of input features with the binary outcome(true/false).
-I would consider this as a **supervised 'binary classification'** task.  
+I would consider this as a **supervised 'binary classification'** task.
 
 ### Datasets and Inputs
 
