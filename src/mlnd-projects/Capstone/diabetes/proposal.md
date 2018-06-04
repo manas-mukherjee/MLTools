@@ -138,7 +138,8 @@ In this case, we would use F2 Score since it favors 'recall' over 'precision'.
     **Fβ score = (1+β2) * (precision⋅recall / (β2⋅precision)+recall)**
     - In this cases, β = 2.
 
-    Precision = [True Positives/(True Positives + False Positives)]
+    **Precision = [True Positives/(True Positives + False Positives)]**
+
     **Recall    = [True Positives/(True Positives + False Negatives)]**
 
 ### Project Design
