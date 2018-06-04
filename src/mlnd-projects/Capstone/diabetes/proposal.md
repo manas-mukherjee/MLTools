@@ -132,12 +132,56 @@ A naive benchmark model for this problem would be to predict that none of the pa
 ### Evaluation Metrics
 _(approx. 1-2 paragraphs)_
 
+
 In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
 
-### Project Design
-_(approx. 1 page)_
+While evaluating the performance of the benchmark models and best solution model, we will leverage the 'model accuracy' using train/test split or K-fold cross validation.
+The input dataset is bit unbalanced(~35%:65%) w.r.t the predition variable 'outcome', so we will definately consider the 'recall' factor.
+Since this model will be used to desease diagnosis, we will try to minimize the 'false negative' type error (i.e A result that appears negative when it should not).
 
-In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
+One way to evaluate the performance of the benchmark model and the solution model is to measure accuracy using cross-validation. Accuracy is defined as the number of correct predictions from all the predictions made. But it is not the best metric in this case due to the unbalanced classes (~20% class 'leave' vs ~80 class 'not leave'). Instead, a confusion matrix would give an unambiguous way to show the prediction results of the classifiers.
+We can also obtain precision and recall from the classification results. Precision is the number of True Positives (TP) divided by the number of True Positives (TP) and False Positives (FP). A low precision indicates a large number of FP. Recall is the number of True Positives (TP) divided by the number of True Positives (TP) and the number of False Negatives (FN). A low recall indicates a large number of FN.
+
+In this case, we would use F2 Score since it favors 'recall' than 'precision'
+Fβ score = (1+β2) * ( precision⋅recall / (β2⋅precision)+recall )
+In this cases, β = 2.
+
+Precision = [True Positives/(True Positives + False Positives)]
+Recall    = [True Positives/(True Positives + False Negatives)]
+
+### Project Design
+
+I'll follow the general machine learning workflow while working on the solution.
+
+1. Identify Environtment and Libraries
+    * Language and Version : Python(Conda distribution) - 2.7
+    * Libraries : Pandas, Scikit-learn, Matplotlib, Seaborn etc.
+
+2. Exploratory Analysis and Data Preprocessing
+    * Clean missing values(if any)
+    * Visualize individual features to understand the distribution and skewness
+    * Visualize feature correlations
+    * Apply log transformation to reduce the effect of outlier
+    * Normalize numerical features to ensure each feature is treated equally when applying supervised learners
+
+3. Experiment with different ML algorithm and find the best one using the above performance metric.
+    * Evaluate FB scores using the following supervised algorithms
+        * LogisticRegression
+        * KNeighborsClassifier
+        * Support Vector Classifier
+        * Decision Tree
+        * GaussianNB
+        * Ensemble methods
+        * DeepLearning - MLP
+        etc
+    * Select top 3 models and perform hyperparameter tuning
+    * Evaluate the best model on the testing set
+
+4. Feature Importance and Insights
+    Find top feature or set of features that are essential for this model.
+    * Evaluate the feature importance
+    * Identify feature cluster(if any) using PCA
+
 
 -----------
 
