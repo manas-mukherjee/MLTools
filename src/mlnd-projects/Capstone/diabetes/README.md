@@ -1,11 +1,14 @@
 # Machine Learning Engineer Nanodegree
-## Capstone Proposal
-
 Name:Manas Mukherjee
+Date:June 20th, 2018
 
-Date:May 29th, 2018
+## NoteBook
+http://htmlpreview.github.io/?https://github.com/manas-mukherjee/machine-learning-nanodegree/blob/master/SupervisedLearning/Capstone/diabetes/diabetes.html
 
+## Reports
+https://github.com/manas-mukherjee/MLTools/blob/master/src/mlnd-projects/Capstone/diabetes/project_report/report.pdf
 
+## Capstone Proposal
 
 ### Domain Background
 
