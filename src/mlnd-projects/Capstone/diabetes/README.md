@@ -1,8 +1,8 @@
 # Machine Learning Engineer Nanodegree
 
-###Name:Manas Mukherjee
+### Name:Manas Mukherjee
 
-###Date:June 20th, 2018
+### Date:June 20th, 2018
 
 ## NoteBook
 http://htmlpreview.github.io/?https://github.com/manas-mukherjee/MLTools/blob/master/src/mlnd-projects/Capstone/diabetes/diabetes.html
