@@ -44,4 +44,6 @@ for x in a:
     print(x)
 
 it = iter(a)
-print(it)
+it = a.__iter__() #equivalent to above
+value = next(it)
+value = it.__next___()

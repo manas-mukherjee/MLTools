@@ -53,9 +53,8 @@ with open('./2-Comprehensions-Generators/item11.txt', 'w') as f:
     f.write(str)
 with open('./2-Comprehensions-Generators/item11.txt') as f:
     result = index_words_file(f)
-    print("list", list(result))
-    '''print(next(result))
+    #print(list(result))
     print(next(result))
     print(next(result))
     print(next(result))
-'''
+    print(next(result))

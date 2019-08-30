@@ -18,7 +18,8 @@ print(value) # <generator object <genexpr> at 0x10ee0c888>
 # Doesn't blow up the memory
 print(next(value))
 
-#lazy iternation using generator 
+#lazy iternation using generator
+#large streaming input
 roots = ((x, x**0.5) for x in value)
 print(next(roots))
 print(next(roots))
